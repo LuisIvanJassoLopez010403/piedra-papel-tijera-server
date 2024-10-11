@@ -4,9 +4,12 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mongoose = require('mongoose');
+const {
+  mongoURL
+} = require('./config').variablesDeConfiguracion;
 
 // connection define
-const databaseUrl = "mongodb+srv://user_1:fmGK2fU90Jb0gRnO@practica.m94ua.mongodb.net/pipati";
+const databaseUrl = mongoURL;
 
 mongoose.connect(databaseUrl, {
   useNewUrlParser: true
